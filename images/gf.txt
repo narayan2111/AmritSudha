@@ -1,0 +1,39 @@
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+export const Banner = () => {
+  const images = [
+    "images/logo2.png",
+    "images/product11.jpg",
+    "images/product12.jpg",
+    "images/product13.jpg",
+    "images/product14.jpg",
+    "images/product15.jpg",
+  ];
+
+  return (
+    <div className="container mx-auto mt-1 sm:mt-5">
+      {/* Carousel */}
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showThumbs={false}
+        showStatus={false}
+        interval={4000}
+        className="w-full md:w-1/2 mx-auto" // Center the carousel
+      >
+        {images.map((imagePath, index) => (
+          <div key={index}>
+            <img
+              loading="lazy"
+              className="w-full object-fill rounded-xl h-32 sm:h-52 md:h-80"
+              src={imagePath}
+              alt={`Product ${index + 1}`} // Updated the alt attribute for better context
+            />
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  );
+};

@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "name": "Rose Incense Sticks",
+        "price": 79,
+        "image": "img/1.png",
+        "description": "Enjoy the soothing fragrance of our Rose Incense Sticks. Expertly crafted to create a calming atmosphere, these incense sticks are perfect for meditation or simply to add a touch of tranquility to your space."
+    },
+    {
+        "id": 2,
+        "name": "Parvati Herbal Agarbatti",
+        "price": 79,
+        "image": "img/2.png",
+        "description": "Immerse yourself in the natural essence of our Parvati Herbal Agarbatti. Carefully curated with herbal scents, these incense sticks bring a refreshing and grounding aroma to your surroundings."
+    },
+    {
+        "id": 3,
+        "name": "Premium Incense Sticks",
+        "price": 89,
+        "image": "img/3.png",
+        "description": "Indulge in the luxury of our Premium Incense Sticks. Elevate your sensory experience with these high-quality incense sticks that create an ambiance of opulence and sophistication."
+    },
+    {
+        "id": 4,
+        "name": "Chandan Premium Dhoop",
+        "price": 99,
+        "image": "img/6.png",
+        "description": "Experience the rich and enchanting aroma of Chandan with our Premium Dhoop. Perfect for spiritual rituals or to simply enjoy the calming and purifying properties of sandalwood."
+    },
+    {
+        "id": 5,
+        "name": "Chandan Incense Sticks",
+        "price": 59,
+        "image": "img/7.png",
+        "description": "Imbibe the essence of Chandan with our Incense Sticks. Let the subtle and timeless fragrance of sandalwood fill your space, creating a serene and harmonious atmosphere."
+    },
+    {
+        "id": 6,
+        "name": "Chakki Fresh Atta",
+        "price": 320,
+        "image": "img/4.png",
+        "description": "Delight your taste buds with the wholesome goodness of Chakki Fresh Atta. Milled to perfection, this atta is ideal for preparing soft and fluffy rotis that bring the authentic taste of home-cooked meals."
+    },
+    {
+        "id": 7,
+        "name": "AmritSudha Tea",
+        "price": 205,
+        "image": "img/5.png",
+        "description": "Savor the exquisite flavor of AmritSudha Tea. Handpicked and carefully blended, this tea promises a rejuvenating experience, making it the perfect beverage to start or end your day."
+    },
+    {
+        "id": 8,
+        "name": "Mustard Oil",
+        "price": 135,
+        "image": "img/8.png",
+        "description": "Add a touch of piquancy to your culinary creations with our pure Mustard Oil. Cold-pressed to retain its natural goodness, this oil is a versatile and healthy choice for all your cooking needs."
+    },
+    {
+        "id": 9,
+        "name": "Alovera & Neem soap",
+        "price": 50,
+        "image": "img/10.png",
+        "description": "Nourish your skin with the goodness of Aloe Vera and Neem. Our soap is thoughtfully crafted to cleanse and moisturize, leaving your skin feeling refreshed and revitalized."
+    },
+    {
+        "id": 10,
+        "name": "Mogra Premium Dhoop",
+        "price": 89,
+        "image": "img/9.png",
+        "description": "Embark on a sensory journey with our Mogra Premium Dhoop. The sweet and floral notes of mogra create a serene environment, perfect for meditation or relaxation."
+    },
+    {
+        "id": 11,
+        "name": "Baby Diapers",
+        "price": 200,
+        "image": "img/11.png",
+        "description": "Provide the utmost comfort to your little one with our Baby Diapers. Thoughtfully designed for a snug fit and excellent absorbency, these diapers ensure your baby stays dry and happy."
+    },
+    {
+        "id": 12,
+        "name": "Kevda Agarbatti",
+        "price": 175,
+        "image": "img/12.png",
+        "description": "Immerse yourself in the captivating fragrance of Kevda with our Agarbatti. Let the sweet and floral aroma create a serene and spiritual ambiance in your living space."
+    },
+    {
+        "id": 13,
+        "name": "Mogra Premium Agarbatti",
+        "price": 200,
+        "image": "img/13.png",
+        "description": "Embark on a sensory journey with our Mogra Premium Agarbatti. The sweet and floral notes of mogra create a serene environment, perfect for meditation or relaxation."
+    },
+    {
+        "id": 14,
+        "name": "Sugandhit Agarbatti",
+        "price": 200,
+        "image": "img/14.png",
+        "description": "Experience the enchanting fragrance of Sugandhit with our Agarbatti. Let the sweet and floral aroma create a serene and spiritual ambiance in your living space."
+    }
+    
+]

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Add the styles for the header here */
+
+        body{
+            font-family: 'Manrope', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(#efeded,#92eab8);
+        }
+
+       
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 125px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: rgb(14, 12, 12);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Add any additional styles for your contact page here */
+
+        /* Example: */
+        .contact-container {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .contact-form {
+            max-width: 50rem;
+            width: 100%;
+        }
+
+        .contact-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            transition: all 0.2s;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #fff;
+            border: 1px solid #3498db;
+            color: #3498db;
+            transform: scale(0.9);
+        }
+    </style>
+    <title>Contact Us - AmritSudha</title>
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo2.png" alt="AmritSudha Logo" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html" target="_blank">Products</a></li>
+                    <li><a href="home.html#offer">About</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Your contact page content goes here -->
+    <Wrapper>
+      <h2 style=" text-align: center;" class="common-heading">Contact Us </h2>
+
+
+      <iframe
+    width="100%"
+    height="400"
+    frameborder="0"
+    style="border: 0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.880882762158!2d80.87593421436558!3d26.780074383215635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bf900460a15f7%3A0x4c1b05171a531fd6!2sAmritSudha%20Office!5e0!3m2!1sen!2sin!4v1664833156963!5m2!1sen!2sin"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  
+
+        <div class="container" style="text-align: center;">
+          <div class="contact-form" style="max-width: 50rem; margin: auto; font-family: 'Poppins', sans-serif;">
+              <form action="https://formspree.io/f/xdojzzlj" method="POST" class="contact-inputs">
+                  <div style="margin-bottom: 1rem;">
+                      <input
+                          type="text"
+                          placeholder="Name"
+                          name="username"
+                          required
+                          autoComplete="off"
+                          style="width: 50%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                  </div>
+      
+                  <div style="margin-bottom: 1rem;">
+                      <input
+                          type="email"
+                          name="Email"
+                          placeholder="Email"
+                          autoComplete="off"
+                          required
+                          style="width: 50%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                  </div>
+      
+                  <textarea
+                      name="Message"
+                      cols="30"
+                      rows="10"
+                      required
+                      autoComplete="off"
+                      placeholder="Enter your message"
+                      style="width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+      
+                  <input type="submit" value="Send" style="cursor: pointer; transition: all 0.2s; background-color: #3498db; color: #fff; border: none; padding: 10px 15px; border-radius: 5px;">
+              </form>
+          </div>
+      </div>
+      
+    </Wrapper>
+
+</body>
+
+</html>
