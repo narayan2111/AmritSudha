@@ -1,0 +1,70 @@
+<!-- checkout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title">CHECKOUT</div>
+        <div class="cart-items"></div>
+        <div class="total">Total: ₹<span id="totalPrice">0.00</span></div>
+        <button onclick="clearCart()">Clear Cart</button>
+    </div>
+
+    <script>
+        // Retrieve cart data from localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Get elements from HTML
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        // Display cart items and calculate total price
+        function displayCart() {
+            let totalPrice = 0;
+
+            // Clear previous content
+            cartItemsContainer.innerHTML = '';
+
+            // Loop through each item in the cart
+            cart.forEach(item => {
+                // Calculate the total price
+                totalPrice += item.price;
+
+                // Check if the item is already in the cart
+                const existingItem = document.getElementById(`cart-item-${item.id}`);
+                if (existingItem) {
+                    // Increase the quantity if the item is already in the cart
+                    const quantityElement = existingItem.querySelector('.quantity');
+                    const quantity = parseInt(quantityElement.innerText) + 1;
+                    quantityElement.innerText = quantity;
+                } else {
+                    // Create a new cart item
+                    const newItem = document.createElement('div');
+                    newItem.id = `cart-item-${item.id}`;
+                    newItem.classList.add('cart-item');
+                    newItem.innerHTML = `<span>${item.name}</span> <span class="price">₹${item.price}</span> <span class="quantity">1</span>`;
+                    cartItemsContainer.appendChild(newItem);
+                }
+            });
+
+            // Update the total price
+            totalPriceElement.innerText = totalPrice.toFixed(2);
+        }
+
+        // Initial display of cart items
+        displayCart();
+
+        // Function to clear the cart
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCart(); // Update the UI
+        }
+    </script>
+</body>
+</html>
