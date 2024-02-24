@@ -20,7 +20,6 @@
                 <div class="buttons">
                     <button onclick="redirectToCheckout()">Check Out</button>
                     <button onclick="clearCart()">Clear Cart</button>
-
                     <button onclick="addToCart()">Add To Cart 
                         <span>
                             <svg class="" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
@@ -87,14 +86,23 @@
     
             if (selectedProduct) {
                 // Retrieve or initialize the cart from localStorage
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-                // Add the selected product to the cart
-                cart.push({
-                    id: selectedProduct.id,
-                    name: selectedProduct.name,
-                    price: selectedProduct.price,
-                });
+                // Check if the item is already in the cart
+                const existingItem = cart.find(item => item.id === selectedProduct.id);
+    
+                if (existingItem) {
+                    // Increase the quantity if the item is already in the cart
+                    existingItem.quantity += 1;
+                } else {
+                    // Add the selected product to the cart
+                    cart.push({
+                        id: selectedProduct.id,
+                        name: selectedProduct.name,
+                        price: selectedProduct.price,
+                        quantity: 1,
+                    });
+                }
     
                 // Update localStorage with the new cart
                 localStorage.setItem('cart', JSON.stringify(cart));
@@ -103,18 +111,17 @@
     
         // Function to handle Check Out button click
         function redirectToCheckout() {
-    // Redirect to checkout.html
-    window.location.href = 'checkout.html';
-}
-function clearCart() {
-    // Clear the cart by removing the 'cart' item from localStorage
-    localStorage.removeItem('cart');
-
-    // You may also want to update the UI or perform any other actions after clearing the cart
-    console.log('Cart cleared!');
-}
-
-
+            // Redirect to checkout.html
+            window.location.href = 'checkout.html';
+        }
+    
+        function clearCart() {
+            // Clear the cart by removing the 'cart' item from localStorage
+            localStorage.removeItem('cart');
+    
+            // You may also want to update the UI or perform any other actions after clearing the cart
+            console.log('Cart cleared!');
+        }
     </script>
     </body>
 </html>

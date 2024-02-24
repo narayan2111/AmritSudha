@@ -1,4 +1,3 @@
-<!-- checkout.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
         <div class="title">CHECKOUT</div>
         <div class="cart-items"></div>
         <div class="total">Total: ₹<span id="totalPrice">0.00</span></div>
-        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="makePayment()">Make Payment</button>
     </div>
 
     <script>
@@ -34,23 +33,15 @@
             // Loop through each item in the cart
             cart.forEach(item => {
                 // Calculate the total price
-                totalPrice += item.price;
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
 
-                // Check if the item is already in the cart
-                const existingItem = document.getElementById(`cart-item-${item.id}`);
-                if (existingItem) {
-                    // Increase the quantity if the item is already in the cart
-                    const quantityElement = existingItem.querySelector('.quantity');
-                    const quantity = parseInt(quantityElement.innerText) + 1;
-                    quantityElement.innerText = quantity;
-                } else {
-                    // Create a new cart item
-                    const newItem = document.createElement('div');
-                    newItem.id = `cart-item-${item.id}`;
-                    newItem.classList.add('cart-item');
-                    newItem.innerHTML = `<span>${item.name}</span> <span class="price">₹${item.price}</span> <span class="quantity">1</span>`;
-                    cartItemsContainer.appendChild(newItem);
-                }
+                // Create a new cart item
+                const newItem = document.createElement('div');
+                newItem.id = `cart-item-${item.id}`;
+                newItem.classList.add('cart-item');
+                newItem.innerHTML = `<span>${item.name}</span> <span class="price">₹${item.price} each</span> <span class="quantity">${item.quantity}</span> <span class="item-total">₹${itemTotal.toFixed(2)}</span>`;
+                cartItemsContainer.appendChild(newItem);
             });
 
             // Update the total price
@@ -59,6 +50,16 @@
 
         // Initial display of cart items
         displayCart();
+
+        // Function to make a payment
+        function makePayment() {
+            // Placeholder function for demonstration purposes
+            alert('Redirecting to Payment Page!'); // Replace this with your actual payment logic
+
+            // After successful payment, you may want to clear the cart or redirect to a confirmation page
+            window.location.href = 'payment.html';
+            clearCart();
+        }
 
         // Function to clear the cart
         function clearCart() {
